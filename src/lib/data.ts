@@ -1,6 +1,23 @@
+
 // TEMPORARY DATA
 
-export let role = "admin";
+import { useClerk } from "@clerk/nextjs";
+import { useEffect, useState } from "react";
+
+
+// const {user} = useClerk(); 
+// const [role, setRole] = useState<string>("");
+// const role1 = user?.publicMetadata.role as string
+
+// useEffect(() => {
+//   if (user) {
+//     // Citim rolul din metadata
+//     const userRole = user.publicMetadata.role as string;
+//     setRole(userRole || "User");
+//   }
+// }, [user]);
+
+// export let role1 = role;
 
 export const teachersData = [
   {
@@ -916,148 +933,149 @@ export const announcementsData = [
 ];
 
 
+
 // YOU SHOULD CHANGE THE DATES OF THE EVENTS TO THE CURRENT DATE TO SEE THE EVENTS ON THE CALENDAR
 export const calendarEvents = [
   {
     title: "Math",
     allDay: false,
-    start: new Date(2024, 7, 12, 8, 0),
-    end: new Date(2024, 7, 12, 8, 45),
+    start: new Date(2024, 10, 1, 8, 0),
+    end: new Date(2024, 10, 1, 8, 45),
   },
   {
     title: "English",
     allDay: false,
-    start: new Date(2024, 7, 12, 9, 0),
-    end: new Date(2024, 7, 12, 9, 45),
+    start: new Date(2024, 10, 2, 9, 0),
+    end: new Date(2024, 10, 2, 9, 45),
   },
   {
     title: "Biology",
     allDay: false,
-    start: new Date(2024, 7, 12, 10, 0),
-    end: new Date(2024, 7, 12, 10, 45),
+    start: new Date(2024, 10, 2, 10, 0),
+    end: new Date(2024, 10, 2, 10, 45),
   },
   {
     title: "Physics",
     allDay: false,
-    start: new Date(2024, 7, 12, 11, 0),
-    end: new Date(2024, 7, 12, 11, 45),
+    start: new Date(2024, 10, 2, 11, 0),
+    end: new Date(2024, 10, 2, 11, 45),
   },
   {
     title: "Chemistry",
     allDay: false,
-    start: new Date(2024, 7, 12, 13, 0),
-    end: new Date(2024, 7, 12, 13, 45),
+    start: new Date(2024, 10, 2, 13, 0),
+    end: new Date(2024, 10, 2, 13, 45),
   },
   {
     title: "History",
     allDay: false,
-    start: new Date(2024, 7, 12, 14, 0),
-    end: new Date(2024, 7, 12, 14, 45),
+    start: new Date(2024, 7, 22, 14, 0),
+    end: new Date(2024, 7, 22, 14, 45),
   },
   {
     title: "English",
     allDay: false,
-    start: new Date(2024, 7, 13, 9, 0),
-    end: new Date(2024, 7, 13, 9, 45),
+    start: new Date(2024, 7, 23, 9, 0),
+    end: new Date(2024, 7, 23, 9, 45),
   },
   {
     title: "Biology",
     allDay: false,
-    start: new Date(2024, 7, 13, 10, 0),
-    end: new Date(2024, 7, 13, 10, 45),
+    start: new Date(2024, 7, 23, 10, 0),
+    end: new Date(2024, 7, 23, 10, 45),
   },
   {
     title: "Physics",
     allDay: false,
-    start: new Date(2024, 7, 13, 11, 0),
-    end: new Date(2024, 7, 13, 11, 45),
+    start: new Date(2024, 7, 23, 11, 0),
+    end: new Date(2024, 7, 23, 11, 45),
   },
 
   {
     title: "History",
     allDay: false,
-    start: new Date(2024, 7, 13, 14, 0),
-    end: new Date(2024, 7, 13, 14, 45),
+    start: new Date(2024, 7, 23, 14, 0),
+    end: new Date(2024, 7, 23, 14, 45),
   },
   {
     title: "Math",
     allDay: false,
-    start: new Date(2024, 7, 14, 8, 0),
-    end: new Date(2024, 7, 14, 8, 45),
+    start: new Date(2024, 7, 24, 8, 0),
+    end: new Date(2024, 7, 24, 8, 45),
   },
   {
     title: "Biology",
     allDay: false,
-    start: new Date(2024, 7, 14, 10, 0),
-    end: new Date(2024, 7, 14, 10, 45),
+    start: new Date(2024, 7, 24, 10, 0),
+    end: new Date(2024, 7, 24, 10, 45),
   },
 
   {
     title: "Chemistry",
     allDay: false,
-    start: new Date(2024, 7, 14, 13, 0),
-    end: new Date(2024, 7, 14, 13, 45),
+    start: new Date(2024, 7, 24, 13, 0),
+    end: new Date(2024, 7, 24, 13, 45),
   },
   {
     title: "History",
     allDay: false,
-    start: new Date(2024, 7, 14, 14, 0),
-    end: new Date(2024, 7, 13, 14, 45),
+    start: new Date(2024, 7, 24, 14, 0),
+    end: new Date(2024, 7, 24, 14, 45),
   },
   {
     title: "English",
     allDay: false,
-    start: new Date(2024, 7, 15, 9, 0),
-    end: new Date(2024, 7, 15, 9, 45),
+    start: new Date(2024, 7, 25, 9, 0),
+    end: new Date(2024, 7, 25, 9, 45),
   },
   {
     title: "Biology",
     allDay: false,
-    start: new Date(2024, 7, 15, 10, 0),
-    end: new Date(2024, 7, 15, 10, 45),
+    start: new Date(2024, 7, 25, 10, 0),
+    end: new Date(2024, 7, 25, 10, 45),
   },
   {
     title: "Physics",
     allDay: false,
-    start: new Date(2024, 7, 15, 11, 0),
-    end: new Date(2024, 7, 15, 11, 45),
+    start: new Date(2024, 7, 25, 11, 0),
+    end: new Date(2024, 7, 25, 11, 45),
   },
 
   {
     title: "History",
     allDay: false,
-    start: new Date(2024, 7, 15, 14, 0),
-    end: new Date(2024, 7, 15, 14, 45),
+    start: new Date(2024, 7, 25, 14, 0),
+    end: new Date(2024, 7, 25, 14, 45),
   },
   {
     title: "Math",
     allDay: false,
-    start: new Date(2024, 7, 16, 8, 0),
-    end: new Date(2024, 7, 16, 8, 45),
+    start: new Date(2024, 7, 26, 8, 0),
+    end: new Date(2024, 7, 26, 8, 45),
   },
   {
     title: "English",
     allDay: false,
-    start: new Date(2024, 7, 16, 9, 0),
-    end: new Date(2024, 7, 16, 9, 45),
+    start: new Date(2024, 7, 26, 9, 0),
+    end: new Date(2024, 7, 26, 9, 45),
   },
 
   {
     title: "Physics",
     allDay: false,
-    start: new Date(2024, 7, 16, 11, 0),
-    end: new Date(2024, 7, 16, 11, 45),
+    start: new Date(2024, 7, 21, 11, 0),
+    end: new Date(2024, 7, 21, 11, 45),
   },
   {
     title: "Chemistry",
     allDay: false,
-    start: new Date(2024, 7, 16, 13, 0),
-    end: new Date(2024, 7, 16, 13, 45),
+    start: new Date(2024, 7, 21, 13, 0),
+    end: new Date(2024, 7, 21, 13, 45),
   },
   {
     title: "History",
     allDay: false,
-    start: new Date(2024, 7, 16, 14, 0),
-    end: new Date(2024, 7, 16, 14, 45),
+    start: new Date(2024, 7, 19, 14, 0),
+    end: new Date(2024, 7, 19, 14, 45),
   },
 ];
