@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 
 import InputField from "../InputField"; 
 import { announcementSchema, AnnouncementSchema, } from "@/lib/formValidationSchema";
-import { createAnnouncement,  updateAnnouncement,  updateEvent,  updateExam,  } from "@/lib/actions";
+import { createAnnouncement,  updateAnnouncement  } from "@/lib/actions";
 import { useFormState } from "react-dom";
 import { Dispatch, SetStateAction, useEffect } from "react";
 import { toast } from "react-toastify";
@@ -42,7 +42,7 @@ const AnnouncementForm = ({
     formAction(data)
   });
 
-const router=useRouter();
+const router = useRouter();
 
   useEffect(() => {
     if (state.success) {
